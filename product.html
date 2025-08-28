@@ -13,7 +13,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -39,52 +39,81 @@
         </ul>
     </nav>
 
+     <!--side navbar-->
+    <section id="sidenav" class="bg-green-100  fixed z-20 top-0 duration-1000" style="width: 50%; height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <P id="closenav" class ="inline cursor-pointer">X</P>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-900">
+            <li>
+                <a class="hover:underline hover:text-red-500" href="index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-red-500" href="product.html">
+                    Products
+                </a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-red-500" href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+
     <!--product-->
-    <section class="text-center">
+    <section class="text-center p-4">
         <h1 class="text-3xl font-bold mt-5">Our Products</h1>
-        <input type=" text" class="border border-black p-2 m-3 "style="width:80%;"  placeholder="search for a product">
+        <input id="search" type=" text" class="border border-black p-2 m-3 "style="width:80%;"  placeholder="search for a product">
     </section>
 
     <!--Images-->
     <section class="p-4 text-center">
 
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-            <div>
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 col-span-2 gap-5">
+            <div class="text-center">
             <img src="./imagess/p1.jpg" class="inline hover:shadow-2xl transform hover:-translate-y-2" alt="">
             <p>Rose </p>
             <p>$20</p>
         </div>
-        <div>
+        <div  class="text-center">
             <img src="./imagess/p2.jpg"  class="inline hover:shadow-2xl  transform hover:-translate-y-2"alt="">
             <p>Lily </p>
             <p>$20</p>
         </div>
-        <div>
+        <div  class="text-center">
             <img src="./imagess/p1.jpg" class="inline hover:shadow-2xl  transform hover:-translate-y-2" alt="">
             <p>Hibiscus </p>
             <p>$20</p>
         </div>
-        <div >
+        <div  class="text-center">
             <img src="./imagess/p2.jpg" class="inline hover:shadow-2xl transform hover:-translate-y-2"alt="">
             <p>New pet plant </p>
             <p>$20</p>
         </div>
-        <div >
+        <div  class="text-center">
             <img src="./imagess/p1.jpg" class="inline hover:shadow-2xl transform hover:-translate-y-2" alt="">
             <p>Lotus </p>
             <p>$20</p>
         </div>
-        <div >
+        <div  class="text-center">
             <img src="./imagess/p2.jpg" class="inline hover:shadow-2xl  transform hover:-translate-y-2"alt="">
             <p>Rose </p>
             <p>$20</p>
         </div>
-        <div >
+        <div  class="text-center">
             <img src="./imagess/best4.jpg" class="inline hover:shadow-2xl transform hover:-translate-y-2" alt="">
             <p>tulip </p>
             <p>$20</p>
         </div>
-        <div>
+        <div  class="text-center">
             <img src="./imagess/best3.jpg" class="inline hover:shadow-2xl transform hover:-translate-y-2"alt="">
             <p>sunflower </p>
             <p>$20</p>
@@ -93,13 +122,16 @@
 
     </section>
 
-
-
      <!--footer-->
     <section class="bg-green-100 p-10 flex flex-col gap-5 ">
         <h1 class="text-4xl font-bold">Greenden</h1>
         <p>The Standard Chunk of Lorem ipsum used since the 1500s is reproduced below for those interest</p>
         <p>@ 2021 Greenday.com</p>
     </section>
+
+
+    <script src="product.js">
+
+    </script>
 </body>
 </html>
